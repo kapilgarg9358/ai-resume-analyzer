@@ -1,87 +1,121 @@
-# Welcome to React Router!
+# AI-Powered Resume Analyzer 
 
-A modern, production-ready template for building full-stack React applications using React Router.
+AI-Powered Resume Analyzer is a modern web application that leverages AI to analyze resumes, provide ATS (Applicant Tracking System) scores, and deliver actionable feedback to help users improve their job applications. Built with React, TypeScript, Zustand, and powered by Puter.js for authentication, file storage, and AI services.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+<img width="1200" alt="Resume demo 01" src="public/images/resume-demo_01.png" />
 
-## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
 
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
 
-Built with ❤️ using React Router.
+
+## 🚀 Features
+
+- **AI-Powered Resume Analysis:** Upload your resume and receive detailed feedback on ATS compatibility, tone, content, structure, and skills.
+  
+   <img width="1200" alt="Resume demo 03" src="public/images/resume-demo_03.png" />
+   
+- **ATS Score:** Instantly see how your resume performs against automated screening systems.
+
+   <img width="1200" alt="Resume demo 02" src="public/images/resume-demo_02.png" />
+   
+- **Actionable Tips:** Get categorized suggestions for improvement, including specific explanations.
+   
+   <img width="1200" alt="Resume demo 04" src="public/images/resume-demo_04.png" />
+   
+- **Job-Aware Feedback:** Optionally provide job title and description for tailored analysis.
+- **Secure File Storage:** All files are managed securely via Puter.js.
+- **Authentication:** Sign in/out with Puter.js for a personalized experience.
+- **Responsive UI:** Works seamlessly across devices.
+- **Data Management:** Wipe all your uploaded data with a single click.
+
+---
+
+## 🛠️ Tech Stack
+
+- **React 19** & **TypeScript**
+- **Claude Sonnet 4** AI Model
+- **React Router 7** (with SSR support)
+- **Vite** for fast development
+- **Tailwind CSS** & **tw-animate-css** for styling and animation
+- **Zustand** for state management
+- **Puter.js** for authentication, file system, AI, and key-value storage
+- **pdfjs-dist** for PDF preview and conversion
+
+---
+
+## 📦 Project Structure
+
+```
+ai-resume-analyzer/
+├── app/
+│   ├── components/      # Reusable UI components
+│   ├── lib/             # Utility libraries (Puter.js, PDF conversion, etc.)
+│   ├── routes/          # Route components (home, upload, resume, auth, wipe)
+│   ├── app.css          # Tailwind and custom styles
+│   └── root.tsx         # App root and error boundary
+├── constants/           # Static data and AI prompt templates
+├── public/              # Static assets (images, icons, pdf worker)
+├── types/               # TypeScript type definitions
+├── .react-router/       # React Router build artifacts
+├── package.json         # Project scripts and dependencies
+├── vite.config.ts       # Vite configuration
+└── README.md            # This file
+```
+
+---
+
+## ⚡ Quick Start
+
+### Prerequisites
+
+- [Node.js 20+](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/AI-Powered-Resume-Analyzer.git
+   cd ai-resume-analyzer
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+
+4. **Open in your browser:**
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+## 📝 Usage
+
+1. **Sign In:** Log in using Puter.js authentication.
+2. **Upload Resume:** Go to "Upload Resume", fill in job details, and upload your PDF.
+3. **Analyze:** Wait for the AI to process your resume and generate feedback.
+4. **Review Feedback:** View ATS score, detailed tips, and download your resume preview.
+5. **Manage Data:** Use the "Wipe App Data" page to delete all your uploaded files and feedback.
+
+---
+
+## 📂 Assets & Resources
+
+- **PDF Worker:** [public/pdf.worker.min.mjs](public/pdf.worker.min.mjs) is required for PDF preview.
+- **Icons:** [public/icons/](public/icons/)
+- **Images:** [public/images/](public/images/)
+
+---
+
+## 🙋 Author
+
+Kapil Garg
